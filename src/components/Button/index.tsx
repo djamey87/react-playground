@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { convertToString } from '../../lib/string.util';
 
 interface Props {
 
@@ -13,7 +14,7 @@ const Button:React.FC<Props> = () => {
 
     return (
         <div data-testid="button-wrapper">
-            <input type="button" value={`I have a value of ${buttonValue}`} onClick={incrementValue} data-testid="button" />
+            <input type="button" value={`I have a value of ${convertToString(buttonValue)}`} onClick={incrementValue} data-testid="button" />
         </div>
     )
 }
